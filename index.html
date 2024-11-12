@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bryn Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Link para Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Botão Flutuante do WhatsApp -->
+<a href="https://wa.me/5511914935104" target="_blank" class="whatsapp-button" aria-label="Converse pelo WhatsApp">
+  <img src="botão.png" alt="WhatsApp">
+</a>
+
+  <!-- Imagem no topo, antes da navbar -->
+  <div class="logo-container">
+    <a href="index.html"><img src="logo.png" alt="Logo" class="logo-image"></a>
+  </div>
+
+  <!-- Barra de Navegação Superior -->
+
+  <!-- Carrossel de Categorias -->
+ <div class="categorias-carrossel">
+    <a href="index.html"><button class="categoria-btn">Em alta</button></a>
+    <a href="anime.html"><button class="categoria-btn">Animes</button></a>
+    <a href="series.html"><button class="categoria-btn">Series</button></a>
+    <a href="one piece.html"><button class="categoria-btn">One Piece</button></a>
+    <a href="games.html"><button class="categoria-btn">Games</button></a>
+    <a href="musica.html"><button class="categoria-btn">Música</button></a>
+    <a href="esportes.html"><button class="categoria-btn">Esportes</button></a>
+  </div>
+
+  <!-- Campo de Pesquisa -->
+  <div class="search-container">
+    <input type="text" placeholder="Pesquisar..." class="search-input" id="search-input">
+    <button class="search-btn" onclick="searchProduct()">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+
+
+<div id="no-results-message" class="no-results-message" style="display: none;">
+   <font color="red"><center><p></p></center></font>
+</div>
+
+
+
+
+<!-- Seção do Carrossel -->
+<section class="carousel">
+  <div class="carousel-images">
+    <img src="camiseta1.png" alt="Imagem 1" class="carousel-item">
+    <img src="camiseta2.png" alt="Imagem 2" class="carousel-item">
+  </div>
+  <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+</section>
+
+    
+<section class="product-gallery">
+<div class="product-card">
+  <img src="2.png" alt="Camiseta 1">
+  <h2>One Piece - Luffy</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta1')"></i>
+  </div>
+</div>
+
+<div class="product-card">
+  <img src="3.png" alt="Camiseta 3">
+  <h2> Carros - Relâmpago McQueen</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta3')"></i>
+  </div>
+</div>
+
+
+<div class="product-card">
+  <img src="4.png" alt="Camiseta 4">
+  <h2>Slasher</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta4')"></i>
+  </div>
+</div>
+
+<div class="product-card">
+  <img src="5.png" alt="Camiseta5">
+  <h2>One Piece - Luffy</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta5')"></i>
+  </div>
+</div>
+
+<div class="product-card">
+  <img src="6.jpeg" alt="Camiseta6">
+  <h2>Naruto e Sasuke</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta6')"></i>
+  </div>
+</div>
+
+<div class="product-card">
+  <img src="7.jpeg" alt="Camiseta7">
+  <h2>One Piece</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta6')"></i>
+  </div>
+</div>
+
+<div class="product-card">
+  <img src="8.jpeg" alt="Camiseta8">
+  <h2>Naruto - Minato</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta6')"></i>
+  </div>
+</div>
+
+<div class="product-card">
+  <img src="9.png" alt="Camiseta9">
+  <h2>The Walking Dead - Negan</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta6')"></i>
+  </div>
+</div>
+
+<div class="product-card">
+  <img src="10.png" alt="Camiseta10">
+  <h2>Pânico</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta6')"></i>
+  </div>
+</div>
+
+<div class="product-card">
+  <img src="11.png" alt="Camiseta11">
+  <h2>The boys - Arte Gorillaz</h2>
+  <div class="buy-favorite-container">
+    <button class="buy-btn">Comprar</button>
+    <i class="heart-icon far fa-heart" onclick="toggleFavorite('camiseta6')"></i>
+  </div>
+</div>
+
+
+
+  
+</section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
