@@ -109,3 +109,27 @@ function moveSlide(direction) {
 
 // Inicializa o carrossel (opcional)
 setInterval(() => moveSlide(1), 3000); // Muda a imagem a cada 3 segundos
+
+
+// função que faz o o botão "comprar" funcionar, redirecionando o usuario para o WhatsApp e colocando a mensagem padrão
+
+// Substitua pelo seu número do WhatsApp
+const whatsappNumber = '5511914935104';
+
+// Função para redirecionar com mensagem personalizada
+function redirectToWhatsApp(productName) {
+    const message = `Olá, me interessei pelo produto "${productName}" do seu site! Gostaria de saber mais detalhes.`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+
+// Seleciona todos os botões de "Comprar" e adiciona o evento de clique
+document.addEventListener("DOMContentLoaded", () => {
+    const buyButtons = document.querySelectorAll('.buy-btn');
+    buyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productName = button.closest('.product-card').querySelector('h2').innerText;
+            redirectToWhatsApp(productName);
+        });
+    });
+});
